@@ -8,7 +8,7 @@ Warlock::Warlock(std::string name, std::string title) : _name(name), _title(titl
 Warlock::~Warlock()
 {
     std::cout << _name << ": My job here is done!" << std::endl;
-    for (std::map<std::string, ASpell *>::iterator it = _SpellBook.begin(); it != SpellBook.end(); ++it) {
+    for (std::map<std::string, ASpell *>::iterator it = _SpellBook.begin(); it != _SpellBook.end(); ++it) {
         delete it->second;
     }
     _SpellBook.clear();
@@ -48,10 +48,10 @@ void Warlock::learnSpell(ASpell *spell)
         _SpellBook.erase(_SpellBook.find(SpellName));
  }
 
-void Warlock::lunchSpell(std::string SpellName, ATarget & target)
+void Warlock::launchSpell(std::string SpellName, ATarget & target)
 {
     if (_SpellBook.find(SpellName) != _SpellBook.end())
-        _SpellBook.[SpellName]->lunch(target);
+        _SpellBook[SpellName]->launch(target);
 }
 
 
@@ -61,8 +61,8 @@ Warlock::Warlock(){}
 
 Warlock & Warlock::operator=(Warlock const & other)
 {
-    _name = other.name;
-    _title = other.title;
+    _name = other._name;
+    _title = other._title;
     return *this;
 }
 

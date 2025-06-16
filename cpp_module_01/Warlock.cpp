@@ -48,7 +48,7 @@ void Warlock::learnSpell(ASpell *spell)
         _SpellBook.erase(_SpellBook.find(SpellName));
  }
 
-void Warlock::lunchSpell(std::string SpellName, ATarget & target)
+void Warlock::launchSpell(std::string SpellName, ATarget & target)
 {
     if (_SpellBook.find(SpellName) != _SpellBook.end())
         _SpellBook.[SpellName]->lunch(target);

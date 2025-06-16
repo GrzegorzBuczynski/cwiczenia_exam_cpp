@@ -3,7 +3,7 @@
 ATarget::ATarget(std::string type) : _type(type) {}
 
 ATarget & ATarget::operator=(ATarget const & other){
-    _type = other.type;
+    _type = other._type;
     return *this;
 }
 
