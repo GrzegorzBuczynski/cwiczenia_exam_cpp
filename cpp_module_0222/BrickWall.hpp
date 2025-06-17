@@ -1,10 +1,10 @@
 #pragma once
 #include "ATarget.hpp"
 
-class Brickwall : public ATarget
+class BrickWall : public ATarget
 {
     public:
-        Brickwall();
-        ~Brickwall();
+        BrickWall();
+        ~BrickWall();
         ATarget * clone() const;
-}
+};

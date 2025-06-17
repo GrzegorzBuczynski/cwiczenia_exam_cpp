@@ -3,7 +3,7 @@
 
 
 TargetGenerator::TargetGenerator(){}
-TargetGenerator~TargetGenerator()
+TargetGenerator::~TargetGenerator()
 {
     for (std::map<std::string, ATarget *>::iterator it = _target.begin(); it != _target.end(); ++it)
         delete it->second;
@@ -16,7 +16,7 @@ void TargetGenerator::learnTargetType(ATarget * target)
         _target[target->getType()] = target->clone();
     }
  }
-void TargetGenerator::forgetTargetType(std::string & target)
+void TargetGenerator::forgetTargetType(std::string const & target)
 {
     if (_target.find(target) != _target.end())
     {
@@ -24,7 +24,7 @@ void TargetGenerator::forgetTargetType(std::string & target)
         _target.erase(target);
     }
 }
-ATarget *  TargetGenerator::createTarget(std::string & target)
+ATarget *  TargetGenerator::createTarget(std::string const & target)
 {
     ATarget * tmp = NULL;
     if (_target.find(target) != _target.end())

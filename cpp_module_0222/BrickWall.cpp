@@ -1,6 +1,6 @@
 #include "BrickWall.hpp"
 
 
-Brickwall::Brickwall() : ATarget("Inconspicuous Red-brick Wall") {}
-Brickwall::~Brickwall() {}
-ATarget * Brickwall::clone() const {return new Brickwall();}
+BrickWall::BrickWall() : ATarget("Inconspicuous Red-brick Wall") {}
+BrickWall::~BrickWall() {}
+ATarget * BrickWall::clone() const {return new BrickWall();}

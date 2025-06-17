@@ -9,8 +9,8 @@ class Warlock
         std::string _title;
         SpellBook _spellBook;
         Warlock();
-        Warlock(Warlock const & other) = 0;
-        Warlock & operator=()(Warlock const & other) = 0;
+        Warlock(Warlock const & other);
+        Warlock & operator=(Warlock const & other);
     public:
         Warlock(std::string _name, std::string title);
         ~Warlock();
@@ -20,7 +20,7 @@ class Warlock
         void introduce() const;
         void learnSpell(ASpell * spell);
         void forgetSpell(std::string const & spell);
-        void launhcSpell(std::string const & spell, ATarget const & target);
+        void launchSpell(std::string const & spell, ATarget const & target);
 };
 
 

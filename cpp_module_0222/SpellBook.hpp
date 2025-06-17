@@ -6,13 +6,13 @@ class SpellBook
 {
     private:
         std::map<std::string, ASpell *> _spellBook;
-        SpellBook(SpellBook const & other) = 0;
-        SpellBook & operator=(SpellBook const & other) = 0;
+        SpellBook(SpellBook const & other);
+        SpellBook & operator=(SpellBook const & other);
     public:
         SpellBook();
         ~SpellBook();
         void learnSpell(ASpell * spell);
-        void forgetSpell(std::string & spell);
-        ASpell *  createSpell(std::string & spell);
+        void forgetSpell(std::string const & spell);
+        ASpell *  createSpell(std::string const & spell);
 };
 
