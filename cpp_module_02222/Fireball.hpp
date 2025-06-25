@@ -1,10 +1,10 @@
 #pragma once
 #include "ASpell.hpp"
 
-class Polymorph : public ASpell
+class Fireball : public ASpell
 {
     public:
-        Polymorph();
-        ~Polymorph();
+        Fireball();
+        ~Fireball();
         ASpell * clone() const;
 };
